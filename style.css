@@ -8,7 +8,9 @@ body
     background-size: 100vw 80vh;
     background-position: center start;
     z-index:2;
-   
+    display:flex;
+    flex-direction:column;
+    
 }
 
 
@@ -16,9 +18,10 @@ body
 header{
     display:flex;
     flex-direction:row;
-    justify-content:space-around;
+    justify-content:space-between;
     gap:30px;
     margin-top:20px;
+    margin-left:-2px;
     z-index:5;
 
 }
@@ -29,11 +32,11 @@ header{
 .logo
 {
     display:flex;
-    align-items: center;
+    align-items:center;
     color:#FF7F50;
     font-size: 32px;
     font-weight:800;
-    text-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    
     
 }
 
@@ -110,28 +113,34 @@ a:hover
     
 }
 
+.bar
+{
+    display:none;
+    font-size: 30px;
+    color:#FF7F50;
+    cursor:pointer;
+}
+
 .introduce
 {
     display:flex;
     flex-direction: column;
-    
+    justify-content: center;
+    align-items:center;
+    height:350px;
+
 }
 
-.intro 
+.introduce .intro 
 {   
+    
     display:flex;
     justify-content:center;
-    margin-top:50px;
-    margin-left:255px;
-    margin-right:255px;
-   
-    
+
 }
 
 h1
 {
-    display:flex;
-    justify-content:center;
     text-align: center;
     color:white;
     font-size:60px;
@@ -142,25 +151,22 @@ h1
 }
 
 
-.sub-intro
+.introduce .sub-intro
 {
     display:flex;
     justify-content:center;
-    margin-top:15px;
-    margin-bottom:20px;
-    margin-left:400px;
-    width:700px;
+    align-items:center;
+    width:900px;
 }
 
 .sub-intro p
 {
-    display:flex;
-    justify-content:center;
+
     text-align:center;
     color:white;
     font-size:24px;
     font-weight:400;
-    width:550px;
+    width:686.8px;
 }
 
 
@@ -215,25 +221,27 @@ h1
     cursor: pointer;
     bottom:70px;
     right:30px;
+  
 }
 
-.middle
+body .middle
 {
-    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-self: center;
     background-color: white;
     background-size: 100px 200px;
-    display:flex;
-    justify-content:space-around;
     padding: 30px 50px 30px 50px;
     margin-top:65px;
-    margin-left:300px;
-    margin-right:300px;
+    width:600px;
+    height:40px;
     border: none;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
-.live-chat
+.middle .live-chat
 {
     background:none;
     border:none;
@@ -243,6 +251,7 @@ h1
     gap:20px;
     font-size:20px;
     cursor: pointer;
+
 }
 
 .live-chat i
@@ -258,7 +267,7 @@ h1
     align-items:center;
 }
 
-.examination
+.middle .examination
 {
     background:none;
     border:none;
@@ -268,6 +277,7 @@ h1
     gap:20px;
     font-size:20px;  
     cursor:pointer;
+
 }
 
 .examination i
@@ -283,7 +293,7 @@ h1
     align-items:center; 
 }
 
-.competition 
+.middle .competition 
 {
     background:none;
     border:none;
@@ -313,7 +323,7 @@ h1
     display:flex;
     align-items:center;
     max-width: 100vw;
-    min-height: 5000px;
+    min-height: 600px;
     flex-direction: column;
 }
 
@@ -346,6 +356,7 @@ h1
     font-size:20px;
     margin-bottom:10px;
     z-index: 1;
+    margin-bottom:40px;
 
 }
 
@@ -361,10 +372,9 @@ h1
     display:flex;
     align-items:center;
     justify-content:space-between;
-    width:1185px;
+    width:1170px;
     margin-top:230px;
-    z-index: 1;
-    margin-left:20px;
+    margin-left:10px;
 
 }
 
@@ -381,6 +391,7 @@ h1
     height:50px;
     width:50px;
     cursor: pointer;
+    z-index: 1;
 }
 .arrow-right
 {
@@ -395,17 +406,19 @@ h1
     height:50px;
     width:50px;
     cursor:pointer;
+    z-index:1;
 }
 
 .list
 {
     position:absolute;
     display:flex;
-    justify-content:space-evenly;
+    justify-content:space-between;
     z-index:0;
-    width:1245px;
-    height:489px;
-    margin-top:10px;
+    width:1200px;
+    height:440px;
+    margin-top:30px;
+    overflow: hidden;
 }
 
 .marketing
@@ -430,11 +443,12 @@ h1
 {
     position:absolute;
     text-align: center;
-    bottom:0px;
+    bottom:10px;
     overflow: hidden;
     color:white;
     font-size:20px;
     cursor:default;
+    padding-top:360px;
     transition: all 0.4s ease-in-out;
 }
 
@@ -467,13 +481,14 @@ h1
 {
     position:absolute;
     text-align: center;
-    bottom:0px;
+    bottom:10px;
     overflow: hidden;
     color:white;
     font-size:20px;
     cursor:default;
     transition: all 0.4s ease-in-out;
     z-index:1;
+    padding-top:360px;
 }
 
 
@@ -506,13 +521,14 @@ h1
 {
     position:absolute;
     text-align: center;
-    bottom:0px;
+    bottom:10px;
     overflow: hidden;
     color:white;
     font-size:20px;
     cursor:default;
     transition: all 0.4s ease-in-out;
     z-index:1;
+    padding-top:360px;
 }
 
 .programming .programming-text:hover
@@ -544,16 +560,34 @@ h1
 {
     position:absolute;
     text-align: center;
-    bottom:0px;
+    bottom:10px;
     overflow: hidden;
     color:white;
     font-size:20px;
     cursor:default;
     transition: all 0.4s ease-in-out;
     z-index:1;
+    padding-top:360px;
 }
 
 .technology .technology-text:hover
 {
     transform:translateY(-150px)
+}
+
+
+@media only screen and (max-width:1170px)
+{
+
+
+    .navigation, .sign-up
+    {
+        display:none;
+    }
+
+    .bar
+    {
+        display:block;
+    }
+
 }
